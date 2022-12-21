@@ -1,0 +1,1 @@
+alert("I am from Static JS Folder")
