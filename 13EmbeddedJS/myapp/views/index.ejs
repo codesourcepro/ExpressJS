@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded JavaScript || Examples</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Embedded JavaScript Tutorials</h1>
+
+    <!-- Displaying Varialbe Data -->
+    <p>
+        ---------- Display Variable ---------- <br>
+        <%= name %>
+    </p>
+
+    <!-- Creating Variable -->
+    <p>
+        ------ Create Variable and Display ------------ <br>
+        <!-- Create -->
+        <% var i=10; %>
+
+            <!-- Display -->
+            <%= i %>
+    </p>
+
+    <!-- Comment in EJS -->
+    <%# Comment will not be present in the rendered HTML %>
+        <p>
+            -------- Comments and If condition ----------- <br>
+            <!-- if condition in EJS -->
+            <%# If evaluates a variable, and if that variable is "true" (i.e. exists, is not empty, and is not a false
+                boolean value). %>
+            
+            <% if(name) { %>
+                Hello! <%= name %>
+            <% } %>
+        </p>
+    <!-- if with Multiple conditions -->
+    <p>
+        -------- If .. Else Contion --------- <br>
+        <% if(id==10) { %>
+            This is Messi.
+        <% } else if (id == 11){ %>
+            This is Neymar.
+        <% } else { %>
+            This neither Messi nor Neymar.
+        <% } %>
+    </p>
+
+    <!-- Loop in EJS -->
+    <section>
+        <p>
+            --------------- For Loop ------------------ <br>
+        <!-- for loop -->
+        <% for (i=0; i<=5; i++) { %>
+            Marks <%= i %> : <%= marks[i] %> <br>
+        <% }%>
+        </p>
+        <p>
+            ------------ For in Loop ------------------<br>
+            <!-- for in loop -->
+            <% for (const key in marks) { %>
+                Marks <%= key %> : <%= marks[key] %> <br>
+            <% }%>
+        </p>
+        <p>
+            ------------ For of Loop ------------------<br>
+            <!-- for of loop -->
+            <% for (const mark of marks) { %>
+                Marks <%= mark %> <br>
+            <% }%>
+        </p>
+    </section>
+    
+</body>
+
+</html>
